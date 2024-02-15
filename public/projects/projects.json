@@ -3,7 +3,7 @@
     "date": "03/09/2022",
     "name": "Rogue Like",
     "title": "Création d'un jeu type Rogue Like en équipe",
-    "description": "Projet de début d'année en groupe.",
+    "description": "Projet de début d'année en groupe écrit en semaine. Le but était de créer un jeu type Rogue Like en Java. Le jeu est jouable en ligne. Le code source est disponible sur le dépôt Git de l'école.",
     "tools": [
       { "id": 0, "name": "Java" },
       { "id": 1, "name": "2022" },
@@ -11,13 +11,13 @@
     ],
     "imagePath": "/projects/roguelike/roguelike.jpg",
     "thumbnailPath": "/projects/roguelike/roguelike.jpg",
-    "repo_link": "https://www.ngc967.nebula.li"
+    "repo_link": ""
   },
   {
     "date": "15/01/2023",
     "title": "Déploiement d'instances docker en fonction ",
     "name": "Odoo",
-    "description": "Projet scolaire ayant pour but de déployer des instances Docker à partir de scripts Bash.",
+    "description": "Projet scolaire ayant pour but de déployer des instances Docker à partir de scripts Bash. Nous avons dû écrire un script d'installation et de configuration d'Odoo. Ainsi que des scripts de déploiement de base de données et de back-up.",
     "repo_type": "github",
     "tools": [
       { "id": 0, "name": "Bash" },
@@ -26,18 +26,18 @@
     ],
     "imagePath": "/projects/odoo/odoo.png",
     "thumbnailPath": "/projects/odoo/odoo.png",
-    "repo_link": "https://www.ngc967.nebula.li"
+    "repo_link": ""
   },
   {
     "date": "04/12/2020",
-    "title": "",
+    "title": "Déploiement d'un serveur Synapse Matrix",
     "name": "Matrix",
-    "description": "",
+    "description": "Déploiement d'un serveur Synapse Matrix disponible sur un serveur et accessible via un client web. Le tout managé par un reverse proxy Nginx.",
     "repo_type": "github",
     "tools": [
-      { "id": 0, "name": "NextJS" },
-      { "id": 1, "name": "Personnel" },
-      { "id": 2, "name": "2020" }
+      { "id": 0, "name": "Bash" },
+      { "id": 1, "name": "Scolaire" },
+      { "id": 2, "name": "2022" }
     ],
     "imagePath": "/projects/matrix/matrix.svg",
     "thumbnailPath": "/projects/matrix/matrix.svg",

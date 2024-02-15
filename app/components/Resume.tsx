@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Resume() {
   return (
     <>
-      <div className="absolute bg-black w-5/12 h-4/5 rounded-xl overflow-hidden left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+      <div className="absolute bg-black w-5/12 h-4/5 rounded-xl overflow-hidden left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-30">
         <div className="h-8 bg-white w-full flex justify-between px-2 items-center">
           <div className="flex gap-1 items-center">
             <Image

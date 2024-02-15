@@ -1,7 +1,7 @@
 "use client";
 import Menu from "./components/Menu";
 import update from "immutability-helper";
-import { Suspense, useCallback, useState } from "react";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import type { XYCoord } from "react-dnd";
 import { useDrop } from "react-dnd";
 import { DndProvider } from "react-dnd";
@@ -12,7 +12,7 @@ import Image from "next/image";
 import CV from "./components/CV";
 import Projects from "./components/Project";
 import Corbeille from "./components/Corbeille";
-import Loading from "./loading";
+import Loading from "./components/loading";
 
 const ItemTypes = {
   BOX: "box",
@@ -27,8 +27,6 @@ export interface BoxProps {
   image_src: string;
   link: string;
 }
-
-// https://www.figma.com/community/file/990081556171733873/windows-11-mockup-by-presently
 
 function Index() {
   const Box: FC<BoxProps> = ({ id, left, top, title, image_src, link }) => {
@@ -87,9 +85,10 @@ function Index() {
   }
   const date = new Date();
   const [menu, setMenu] = useState(false);
-  const [cv, setCv] = useState(false);
-  const [projet, setProjet] = useState(false);
-  const [windowState, setWindowState] = useState(false);
+  const [cv, setCv] = useState<boolean | null>(null);
+  const [projet, setProjet] = useState<boolean | null>(null);
+  const [windowState, setWindowState] = useState<boolean | null>(null);
+  const [mobile, setMobile] = useState(false);
 
   const [boxes, setBoxes] = useState<{
     [key: string]: {
@@ -170,12 +169,28 @@ function Index() {
     [moveBox]
   );
 
+  useEffect(() => {
+    if (window.innerWidth < 1024) setMobile(true);
+  }, []);
+
+  if (mobile)
+    return (
+      <>
+        {/* Mobile */}
+        <div className="min-h-screen w-full">
+          <p className="absolute left-1/2 top-1/2 text-center -translate-x-1/2 -translate-y-1/2 text-black">
+            Merci de consulter ce site sur un ordinateur
+          </p>{" "}
+        </div>
+      </>
+    );
+
   return (
     <>
       {menu && (
         <>
           <div
-            className="h-full w-full absolute bottom-0 left-0 z-30"
+            className="h-full w-full absolute bottom-0 left-0 z-40"
             onClick={() => setMenu(false)}
           ></div>
           <Menu />
@@ -187,6 +202,9 @@ function Index() {
           setVisible={() => {
             setCv(!cv);
           }}
+          setDestroy={() => {
+            setCv(null);
+          }}
         />
       )}
       {projet && (
@@ -195,6 +213,9 @@ function Index() {
           setVisible={() => {
             setProjet(!projet);
           }}
+          setDestroy={() => {
+            setProjet(null);
+          }}
         />
       )}
       {windowState && (
@@ -202,6 +223,9 @@ function Index() {
           visibility={windowState}
           setVisible={() => {
             setWindowState(!windowState);
+          }}
+          setDestroy={() => {
+            setProjet(null);
           }}
         />
       )}
@@ -236,7 +260,7 @@ function Index() {
               />
               My portfolio!
             </div>
-            {windowState && (
+            {windowState !== null && (
               <div
                 onClick={() => {
                   setWindowState(!windowState);
@@ -252,7 +276,7 @@ function Index() {
               </div>
             )}
 
-            {cv && (
+            {cv !== null && (
               <div
                 onClick={() => {
                   setCv(!cv);
@@ -267,7 +291,7 @@ function Index() {
                 />
               </div>
             )}
-            {projet && (
+            {projet !== null && (
               <div
                 onClick={() => {
                   setProjet(!projet);

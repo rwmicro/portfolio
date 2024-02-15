@@ -17,16 +17,18 @@ type Project = {
 export default function Projects({
   visibility,
   setVisible,
+  setDestroy,
 }: {
   visibility: boolean;
   setVisible: any;
+  setDestroy: any;
 }) {
   const [project, setProject] = useState<Project>();
 
   return (
     visibility && (
       <>
-        <div className="absolute bg-[#202020] border-neutral-700 w-8/12 h-4/5 text-white rounded-xl left-1/2 overflow-hidden -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col">
+        <div className="absolute bg-[#202020] border-neutral-700 w-8/12 h-4/5 text-white rounded-xl left-1/2 overflow-hidden -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col z-30">
           <div className="h-10 w-full flex justify-between pl-2 items-center">
             <div className="flex gap-1 items-center h-full">
               <div>
@@ -43,7 +45,9 @@ export default function Projects({
               </h2>
             </div>
             <div className="flex items-center">
-              <div className="w-12 hover:bg-white/10 flex justify-center">
+              <div className="w-12 hover:bg-white/10 flex justify-center"
+                onClick={setVisible}
+              >
                 <Image
                   width={50}
                   height={50}
@@ -63,7 +67,7 @@ export default function Projects({
               </div>
               <div
                 className="w-12 hover:bg-red-600 flex justify-center"
-                onClick={setVisible}
+                onClick={setDestroy}
               >
                 <Image
                   width={50}
