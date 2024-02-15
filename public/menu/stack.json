@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Front-end",
+    "stack": [
+      {
+        "imagePath": "/menu/nextjs.svg",
+        "name": "NextJS"
+      },
+      {
+        "imagePath": "/menu/typescript.png",
+        "name": "Typescript"
+      },
+      {
+        "imagePath": "/menu/graphql.png",
+        "name": "GraphQL"
+      },
+      {
+        "imagePath": "/menu/tailwind.png",
+        "name": "TailwindCSS"
+      },
+      {
+        "imagePath": "/menu/shadcnui.png",
+        "name": "ShadcnUI"
+      }
+    ]
+  },
+  {
+    "name": "Back-end",
+    "stack": [
+      {
+        "imagePath": "/menu/prisma.png",
+        "name": "Prisma"
+      }
+    ]
+  },
+  {
+    "name": "Ops",
+    "stack": [
+      {
+        "imagePath": "/menu/bash.png",
+        "name": "Bash"
+      },
+      {
+        "imagePath": "/menu/docker.png",
+        "name": "Docker"
+      },
+      {
+        "imagePath": "/menu/kubernetes.png",
+        "name": "Kubernetes"
+      },
+      {
+        "imagePath": "/menu/ansible.png",
+        "name": "Ansible"
+      }
+    ]
+  }
+]

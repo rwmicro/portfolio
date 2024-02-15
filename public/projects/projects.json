@@ -1,0 +1,61 @@
+[
+  {
+    "date": "03/09/2022",
+    "name": "Rogue Like",
+    "title": "Création d'un jeu type Rogue Like en équipe",
+    "description": "Projet de début d'année en groupe.",
+    "tools": [
+      { "id": 0, "name": "Java" },
+      { "id": 1, "name": "2022" },
+      { "id": 2, "name": "Scolaire" }
+    ],
+    "imagePath": "/projects/roguelike/roguelike.jpg",
+    "thumbnailPath": "/projects/roguelike/roguelike.jpg",
+    "repo_link": "https://www.ngc967.nebula.li"
+  },
+  {
+    "date": "15/01/2023",
+    "title": "Déploiement d'instances docker en fonction ",
+    "name": "Odoo",
+    "description": "Projet scolaire ayant pour but de déployer des instances Docker à partir de scripts Bash.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "Bash" },
+      { "id": 1, "name": "Scolaire" },
+      { "id": 2, "name": "2023" }
+    ],
+    "imagePath": "/projects/odoo/odoo.png",
+    "thumbnailPath": "/projects/odoo/odoo.png",
+    "repo_link": "https://www.ngc967.nebula.li"
+  },
+  {
+    "date": "04/12/2020",
+    "title": "",
+    "name": "Matrix",
+    "description": "",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "NextJS" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2020" }
+    ],
+    "imagePath": "/projects/matrix/matrix.svg",
+    "thumbnailPath": "/projects/matrix/matrix.svg",
+    "repo_link": ""
+  },
+  {
+    "date": "04/12/2020",
+    "title": "Recontruction du site Netflix en NextJS",
+    "name": "Clone Netflix",
+    "description": "Ce projet avait pour but de refaire le site Netflix afin de m'entrainer de manière plus ludique que de suivre un cours en ligne.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "NextJS" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2020" }
+    ],
+    "imagePath": "/projects/netflix/netflix.jpg",
+    "thumbnailPath": "/projects/netflix/N.png",
+    "repo_link": "https://www.ngc967.nebula.li"
+  }
+]
