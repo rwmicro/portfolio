@@ -1,232 +1,114 @@
 "use client";
-import Menu from "./components/Menu";
-import update from "immutability-helper";
-import { Suspense, useCallback, useEffect, useState } from "react";
-import type { XYCoord } from "react-dnd";
-import { useDrop } from "react-dnd";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import type { FC } from "react";
-import { useDrag } from "react-dnd";
+import React, { useState, useCallback, useEffect, Suspense } from "react";
+import { XYCoord, useDrop } from "react-dnd";
 import Image from "next/image";
+import Menu from "./components/Menu";
 import CV from "./components/CV";
 import Projects from "./components/Project";
 import Corbeille from "./components/Corbeille";
 import Loading from "./components/loading";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import Icon from "./components/Icon";
+import iconsJSON from "../public/icons.json";
 
-const ItemTypes = {
-  BOX: "box",
-};
-
-export interface BoxProps {
-  id: any;
-  left: number;
-  top: number;
-  hideSourceOnDrag?: boolean;
-  title: string;
-  image_src: string;
-  link: string;
-}
-
-function Index() {
-  const Box: FC<BoxProps> = ({ id, left, top, title, image_src, link }) => {
-    const [{ isDragging }, drag] = useDrag(
-      () => ({
-        type: ItemTypes.BOX,
-        item: { id, left, top },
-        collect: (monitor) => ({
-          isDragging: monitor.isDragging(),
-        }),
-      }),
-      [id, left, top]
-    );
-
-    if (isDragging) {
-      return <div ref={drag} />;
-    }
-    return (
-      <div
-        ref={drag}
-        style={{ left, top }}
-        data-testid="box"
-        className="absolute cursor-pointer hover:bg-blue-900 rounded w-20 h-20 flex flex-col text-center items-center py-1"
-        onClick={() => openElement(link)}
-      >
-        <div className="h-full">
-          <Image
-            width={48}
-            height={48}
-            src={image_src}
-            alt={title}
-            className="w-14 h-14 p-1 object-contain"
-          />
-        </div>
-        <span className="text-xs font-medium text-white">{title}</span>
-      </div>
-    );
-  };
-  function openElement(url: string) {
-    if (url === "resume") {
-      setCv(true);
-      return;
-    }
-    if (url === "projets") {
-      setProjet(true);
-      return;
-    }
-    if (url === "corbeille") {
-      setWindowState(true);
-      return;
-    }
-    const win = window.open(url, "_blank", "noopener,noreferrer");
-    if (win) {
-      win.focus();
-    }
-  }
-  const date = new Date();
-  const [menu, setMenu] = useState(false);
-  const [cv, setCv] = useState<boolean | null>(null);
-  const [projet, setProjet] = useState<boolean | null>(null);
-  const [windowState, setWindowState] = useState<boolean | null>(null);
-  const [mobile, setMobile] = useState(false);
-
+const Index: React.FC = () => {
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [cvVisible, setCvVisible] = useState<boolean | null>(null);
+  const [projectsVisible, setProjectsVisible] = useState<boolean | null>(null);
+  const [corbeilleVisible, setCorbeilleVisible] = useState<boolean | null>(
+    null
+  );
+  const [isMobile, setIsMobile] = useState(false);
   const [boxes, setBoxes] = useState<{
     [key: string]: {
-      top: number | undefined;
-      left: number | undefined;
+      top: number;
+      left: number;
       title: string;
       image_src: string;
       link: string;
     };
-  }>({
-    a: {
-      top: 5,
-      left: 5,
-      title: "Projets",
-      image_src: "/folder.png",
-      link: "projets",
-    },
-    b: {
-      top: 90,
-      left: 5,
-      title: "CV",
-      image_src: "/adobe.png",
-      link: "resume",
-    },
-    c: {
-      top: 175,
-      left: 5,
-      title: "GitHub",
-      image_src: "/github.png",
-      link: "https://www.github.com/rwmicro/",
-    },
-    d: {
-      top: 260,
-      left: 5,
-      title: "Linkedin",
-      image_src: "/linkedin.png",
-      link: "https://www.linkedin.com/in/mrgx/",
-    },
-    e: {
-      top: 345,
-      left: 5,
-      title: "Corbeille",
-      image_src: "/bin.png",
-      link: "corbeille",
-    },
-  });
-  interface DragItem {
-    type: string;
-    id: string;
-    top: number;
-    left: number;
-  }
-
-  const moveBox = useCallback(
-    (id: string, left: number, top: number) => {
-      setBoxes(
-        update(boxes, {
-          [id]: {
-            $merge: { left, top },
-          },
-        })
-      );
-    },
-    [boxes, setBoxes]
-  );
-
-  const [, drop] = useDrop(
-    () => ({
-      accept: ItemTypes.BOX,
-      drop(item: DragItem, monitor) {
-        const delta = monitor.getDifferenceFromInitialOffset() as XYCoord;
-        const left = Math.round(item.left + delta.x);
-        const top = Math.round(item.top + delta.y);
-        moveBox(item.id, left, top);
-        return undefined;
-      },
-    }),
-    [moveBox]
-  );
+  }>(iconsJSON);
 
   useEffect(() => {
-    if (window.innerWidth < 1024) setMobile(true);
+    if (window.innerWidth < 1024) setIsMobile(true);
   }, []);
 
-  if (mobile)
+  const handleOpenElement = (url: string) => {
+    if (url === "resume") {
+      setCvVisible(true);
+    } else if (url === "projets") {
+      setProjectsVisible(true);
+    } else if (url === "corbeille") {
+      setCorbeilleVisible(true);
+    } else {
+      const win = window.open(url, "_blank", "noopener,noreferrer");
+      if (win) {
+        win.focus();
+      }
+    }
+  };
+
+  const handleDrop = useCallback(
+    (id: string, left: number, top: number) => {
+      setBoxes((prevBoxes) => ({
+        ...prevBoxes,
+        [id]: { ...prevBoxes[id], left, top },
+      }));
+    },
+    [setBoxes]
+  );
+
+  const [, drop] = useDrop(() => ({
+    accept: "box",
+    drop(item: any, monitor) {
+      const delta = monitor.getDifferenceFromInitialOffset() || { x: 0, y: 0 };
+      const left = Math.round(item.left + delta.x);
+      const top = Math.round(item.top + delta.y);
+      handleDrop(item.id, left, top);
+    },
+  }));
+
+  const date = new Date();
+
+  if (isMobile) {
     return (
-      <>
-        {/* Mobile */}
-        <div className="min-h-screen w-full">
-          <p className="absolute left-1/2 top-1/2 text-center -translate-x-1/2 -translate-y-1/2 text-black">
-            Merci de consulter ce site sur un ordinateur
-          </p>{" "}
-        </div>
-      </>
+      <p className="absolute left-1/2 top-1/2 text-center -translate-x-1/2 -translate-y-1/2 text-black">
+        Merci de consulter ce site sur un ordinateur
+      </p>
     );
+  }
 
   return (
     <>
-      {menu && (
+      {menuVisible && (
         <>
           <div
             className="h-full w-full absolute bottom-0 left-0 z-40"
-            onClick={() => setMenu(false)}
+            onClick={() => setMenuVisible(false)}
           ></div>
           <Menu />
         </>
       )}
-      {cv && (
+      {cvVisible && (
         <CV
-          visibility={cv}
-          setVisible={() => {
-            setCv(!cv);
-          }}
-          setDestroy={() => {
-            setCv(null);
-          }}
+          visibility={cvVisible}
+          setVisible={() => setCvVisible(!cvVisible)}
+          setDestroy={() => setCvVisible(null)}
         />
       )}
-      {projet && (
+      {projectsVisible && (
         <Projects
-          visibility={projet}
-          setVisible={() => {
-            setProjet(!projet);
-          }}
-          setDestroy={() => {
-            setProjet(null);
-          }}
+          visibility={projectsVisible}
+          setVisible={() => setProjectsVisible(!projectsVisible)}
+          setDestroy={() => setProjectsVisible(null)}
         />
       )}
-      {windowState && (
+      {corbeilleVisible && (
         <Corbeille
-          visibility={windowState}
-          setVisible={() => {
-            setWindowState(!windowState);
-          }}
-          setDestroy={() => {
-            setWindowState(null);
-          }}
+          visibility={corbeilleVisible}
+          setVisible={() => setCorbeilleVisible(!corbeilleVisible)}
+          setDestroy={() => setCorbeilleVisible(null)}
         />
       )}
 
@@ -247,7 +129,7 @@ function Index() {
               alt="logo"
               className="p-0.5 rounded hover:bg-white/10 z-50"
               quality={100}
-              onClick={() => setMenu(!menu)}
+              onClick={() => setMenuVisible(!menuVisible)}
             />
             <div className="h-10 w-52 bg-white/10 rounded-full hover:bg-white/15 text-neutral-500 flex items-center pl-3">
               {" "}
@@ -260,10 +142,10 @@ function Index() {
               />
               My portfolio!
             </div>
-            {windowState !== null && (
+            {corbeilleVisible !== null && (
               <div
                 onClick={() => {
-                  setWindowState(!windowState);
+                  setCorbeilleVisible(!corbeilleVisible);
                 }}
               >
                 <Image
@@ -276,10 +158,10 @@ function Index() {
               </div>
             )}
 
-            {cv !== null && (
+            {cvVisible !== null && (
               <div
                 onClick={() => {
-                  setCv(!cv);
+                  setCvVisible(!cvVisible);
                 }}
               >
                 <Image
@@ -291,10 +173,10 @@ function Index() {
                 />
               </div>
             )}
-            {projet !== null && (
+            {projectsVisible !== null && (
               <div
                 onClick={() => {
-                  setProjet(!projet);
+                  setProjectsVisible(!projectsVisible);
                 }}
               >
                 <Image
@@ -359,31 +241,24 @@ function Index() {
       </div>
       <div ref={drop} className="w-full h-screen">
         {Object.keys(boxes).map((key) => {
-          const { left, top, title, image_src, link } = boxes[key] as {
-            top: number;
-            left: number;
-            title: string;
-            image_src: string;
-            link: string;
-          };
+          const { left, top, title, image_src, link } = boxes[key];
           return (
-            <div>
-              <Box
-                key={key}
-                id={key}
-                left={left}
-                top={top}
-                title={title}
-                image_src={image_src}
-                link={link}
-              />
-            </div>
+            <Icon
+              key={key}
+              id={key}
+              left={left}
+              top={top}
+              title={title}
+              image_src={image_src}
+              link={link}
+              openElement={handleOpenElement}
+            />
           );
         })}
       </div>
     </>
   );
-}
+};
 
 export default function Home() {
   return (
