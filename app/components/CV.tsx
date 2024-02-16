@@ -1,16 +1,20 @@
 import Image from "next/image";
 import { useDrag } from "react-dnd";
 import { useState } from "react";
-export default function CV({
-  visibility,
-  setVisible,
-  setDestroy,
-}: {
+
+interface CVProps {
   visibility: boolean;
-  setVisible: any;
-  setDestroy: any;
-}) {
-  const [position, setPosition] = useState({
+  setVisible: () => void;
+  setDestroy: () => void;
+}
+
+interface Position {
+  x: number;
+  y: number;
+}
+
+export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
+  const [position, setPosition] = useState<Position>({
     x: window.innerWidth / 2,
     y: window.innerHeight / 2,
   });
@@ -20,10 +24,10 @@ export default function CV({
     end: (_item, monitor) => {
       const offset = monitor.getDifferenceFromInitialOffset();
       if (offset) {
-        setPosition({
-          x: position.x + offset.x,
-          y: position.y + offset.y,
-        });
+        setPosition((prevPosition) => ({
+          x: prevPosition.x + offset.x,
+          y: prevPosition.y + offset.y,
+        }));
       }
     },
     type: "CV",

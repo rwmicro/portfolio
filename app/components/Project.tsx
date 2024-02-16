@@ -15,15 +15,17 @@ type Project = {
   tools: { id: number; name: string }[];
 };
 
+interface ProjectsProps {
+  visibility: boolean;
+  setVisible: () => void;
+  setDestroy: () => void;
+}
+
 export default function Projects({
   visibility,
   setVisible,
   setDestroy,
-}: {
-  visibility: boolean;
-  setVisible: any;
-  setDestroy: any;
-}) {
+}: ProjectsProps) {
   const [project, setProject] = useState<Project>();
   const [position, setPosition] = useState({
     x: window.innerWidth / 2,
