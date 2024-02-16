@@ -225,7 +225,7 @@ function Index() {
             setWindowState(!windowState);
           }}
           setDestroy={() => {
-            setProjet(null);
+            setWindowState(null);
           }}
         />
       )}

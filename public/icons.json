@@ -1,0 +1,37 @@
+{
+  "projects": {
+    "top": 5,
+    "left": 5,
+    "title": "Projets",
+    "image_src": "/folder.png",
+    "link": "projets"
+  },
+  "resume": {
+    "top": 90,
+    "left": 5,
+    "title": "CV",
+    "image_src": "/adobe.png",
+    "link": "resume"
+  },
+  "github": {
+    "top": 175,
+    "left": 5,
+    "title": "GitHub",
+    "image_src": "/github.png",
+    "link": "https://www.github.com/rwmicro/"
+  },
+  "linkedin": {
+    "top": 260,
+    "left": 5,
+    "title": "Linkedin",
+    "image_src": "/linkedin.png",
+    "link": "https://www.linkedin.com/in/mrgx/"
+  },
+  "bin": {
+    "top": 345,
+    "left": 5,
+    "title": "Corbeille",
+    "image_src": "/bin.png",
+    "link": "corbeille"
+  }
+}

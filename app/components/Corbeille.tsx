@@ -1,13 +1,14 @@
 import Image from "next/image";
 import corbeilleJSON from "../../public/corbeille/corbeille.json";
 import { useState } from "react";
+import { useDrag } from "react-dnd";
 
 type Corbeille = {
   thumbnailPath: string;
   name: string;
 };
 
-export default function Projects({
+export default function Corbeille({
   visibility,
   setVisible,
   setDestroy,
@@ -17,10 +18,33 @@ export default function Projects({
   setDestroy: any;
 }) {
   const [element, setElement] = useState<string | null>(null);
+  const [position, setPosition] = useState({
+    x: window.innerWidth / 2,
+    y: window.innerHeight / 2,
+  });
+
+  const [, drag] = useDrag({
+    item: { type: "box" },
+    end: (_item, monitor) => {
+      const offset = monitor.getDifferenceFromInitialOffset();
+      if (offset) {
+        setPosition({
+          x: position.x + offset.x,
+          y: position.y + offset.y,
+        });
+      }
+    },
+    type: "Corbeille",
+  });
+
   return (
     visibility && (
       <>
-        <div className="absolute bg-[#202020] border-neutral-700 w-8/12 h-4/5 text-white rounded-xl left-1/2 overflow-hidden -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col z-30">
+        <div
+          ref={drag}
+          style={{ left: `${position.x}px`, top: `${position.y}px` }}
+          className="absolute bg-[#202020] border-neutral-700 w-8/12 h-4/5 text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30"
+        >
           <div className="h-10 w-full flex justify-between pl-2 items-center">
             <div className="flex gap-1 items-center h-full">
               <div>
