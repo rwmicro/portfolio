@@ -1,5 +1,22 @@
 [
   {
+    "name": "IA",
+    "stack": [
+      {
+        "imagePath": "/menu/python.png",
+        "name": "Python"
+      },
+      {
+        "imagePath": "/menu/pytorch.png",
+        "name": "PyTorch"
+      },
+      {
+        "imagePath": "/menu/opencv.png",
+        "name": "OpenCV"
+      }
+    ]
+  },
+  {
     "name": "Front-end",
     "stack": [
       {
@@ -47,6 +64,10 @@
       {
         "imagePath": "/menu/kubernetes.png",
         "name": "Kubernetes"
+      },
+      {
+        "imagePath": "/menu/terraform.png",
+        "name": "Terraform"
       },
       {
         "imagePath": "/menu/ansible.png",

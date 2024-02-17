@@ -3,7 +3,7 @@ import stackJSON from "../../public/menu/stack.json";
 export default function Menu() {
   return (
     <>
-      <div className="absolute h-3/5 w-[35rem] bottom-16 left-1/2 -translate-x-1/2 rounded-xl overflow-hidden z-40">
+      <div className="absolute h-[62%] w-[36rem] bottom-16 left-1/2 -translate-x-1/2 rounded-xl overflow-hidden z-40">
         <div className="glass bg-neutral-900/60 p-8 h-full">
           <div className="flex items-center rounded p-1 text-xs font-semibold gap-2 text-neutral-400 border-b-2 border-b-[#08a1f7] bg-black">
             <Image
@@ -29,7 +29,7 @@ export default function Menu() {
                     See more
                   </span>
                 </div>
-                <div className="flex flex-wrap items-center pb-5">
+                <div className="flex flex-wrap items-center pb-3">
                   {category.stack.map((technology, number) => (
                     <div
                       key={number}
