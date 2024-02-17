@@ -436,7 +436,7 @@ export default function Projects({
                       rel="noopener noreferrer"
                     >
                       {" "}
-                      c'est ici!
+                      ici!
                     </Link>
                   </div>
                 </div>
