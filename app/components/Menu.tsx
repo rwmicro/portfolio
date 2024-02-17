@@ -3,8 +3,8 @@ import stackJSON from "../../public/menu/stack.json";
 export default function Menu() {
   return (
     <>
-      <div className="absolute h-[62%] w-[36rem] bottom-16 left-1/2 -translate-x-1/2 rounded-xl overflow-hidden z-40">
-        <div className="glass bg-neutral-900/60 p-8 h-full">
+      <div className="absolute w-[36rem] bottom-16 left-1/2 -translate-x-1/2 rounded-xl overflow-hidden z-40">
+        <div className="glass bg-neutral-900/80 p-8 h-full">
           <div className="flex items-center rounded p-1 text-xs font-semibold gap-2 text-neutral-400 border-b-2 border-b-[#08a1f7] bg-black">
             <Image
               loading="eager"
@@ -20,7 +20,7 @@ export default function Menu() {
               className="bg-transparent w-full h-full outline-none"
             />
           </div>
-          <div className="text-white p-2">
+          <div className="text-white p-2 min-h-full">
             {stackJSON.map((category, number) => (
               <>
                 <div className="flex items-center justify-between" key={number}>
@@ -54,29 +54,29 @@ export default function Menu() {
               </>
             ))}
           </div>
+        </div>
 
-          <div className="bg-neutral-900/60 absolute bottom-0 w-full left-0 px-8 py-3 glass h-20 border-t">
-            <div className="flex justify-between text-neutral-200 text-sm font-semibold">
-              <div className="flex items-center gap-2">
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/menu/moi.jpeg"
-                  alt="Me"
-                  className="p-0.5 w-11 rounded-full"
-                />
-                <h2>Martin Rigaux</h2>
-              </div>
+        <div className="bg-neutral-900/90  w-full px-8 py-3 glass h-20 border-t">
+          <div className="flex justify-between text-neutral-200 text-sm font-semibold">
+            <div className="flex items-center gap-2">
               <Image
                 loading="eager"
                 width={50}
                 height={50}
-                src="/menu/power.png"
-                alt="Power"
-                className="p-3 w-12 rounded-full brightness-90"
+                src="/menu/moi.jpeg"
+                alt="Me"
+                className="p-0.5 w-11 rounded-full"
               />
+              <h2>Martin Rigaux</h2>
             </div>
+            <Image
+              loading="eager"
+              width={50}
+              height={50}
+              src="/menu/power.png"
+              alt="Power"
+              className="p-3 w-12 rounded-full brightness-90"
+            />
           </div>
         </div>
       </div>
