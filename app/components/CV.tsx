@@ -45,10 +45,11 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image
+                  loading="eager"
                   width={96}
                   height={96}
                   src="/adobe.png"
-                  alt="close window"
+                  alt="Adobe Acrobat Reader"
                   className="p-1 w-7"
                 />
               </div>
@@ -62,19 +63,21 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
                 onClick={setVisible}
               >
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/minus.png"
-                  alt="close window"
+                  alt="Minus Window"
                   className="p-1 w-7"
                 />
               </div>
               <div className="w-12 hover:bg-white/10 flex justify-center">
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/square.png"
-                  alt="close window"
+                  alt="Maximize window"
                   className="p-1.5 w-7"
                 />
               </div>
@@ -83,10 +86,11 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
                 onClick={setDestroy}
               >
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/close.png"
-                  alt="close window"
+                  alt="Close window"
                   className="p-1.5 w-7 h-full"
                 />
               </div>
@@ -102,6 +106,7 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
             </div>
             <div>
               <Image
+                loading="eager"
                 width={50}
                 height={50}
                 src="/settings.png"

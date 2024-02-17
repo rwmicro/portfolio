@@ -56,6 +56,7 @@ export default function Corbeille({
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/bin.png"
@@ -73,6 +74,7 @@ export default function Corbeille({
                 onClick={setVisible}
               >
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/minus.png"
@@ -82,6 +84,7 @@ export default function Corbeille({
               </div>
               <div className="w-12 hover:bg-white/10 flex justify-center">
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/square.png"
@@ -94,6 +97,7 @@ export default function Corbeille({
                 onClick={setDestroy}
               >
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/close.png"
@@ -107,6 +111,7 @@ export default function Corbeille({
             <div className="flex items-center gap-1">
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/arrow-neutral.png"
@@ -116,6 +121,7 @@ export default function Corbeille({
               </div>
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/arrow-neutral.png"
@@ -125,6 +131,7 @@ export default function Corbeille({
               </div>
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/chevron.png"
@@ -134,6 +141,7 @@ export default function Corbeille({
               </div>
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/arrow-white.png"
@@ -146,6 +154,7 @@ export default function Corbeille({
               <div className="flex items-center h-full">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/bin.png"
@@ -155,6 +164,7 @@ export default function Corbeille({
                 </div>
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/up.png"
@@ -168,6 +178,7 @@ export default function Corbeille({
               <div className="flex items-center gap-1">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -177,6 +188,7 @@ export default function Corbeille({
                 </div>
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/reload.png"
@@ -189,6 +201,7 @@ export default function Corbeille({
             <div className="flex items-center gap-1 h-full w-3/12 border-[0.2px] border-neutral-600 px-2">
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/search.png"
@@ -208,6 +221,7 @@ export default function Corbeille({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/up.png"
@@ -216,6 +230,7 @@ export default function Corbeille({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/pc.png"
@@ -227,6 +242,7 @@ export default function Corbeille({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -235,6 +251,7 @@ export default function Corbeille({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/desktop.png"
@@ -246,6 +263,7 @@ export default function Corbeille({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -254,6 +272,7 @@ export default function Corbeille({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/download.png"
@@ -265,6 +284,7 @@ export default function Corbeille({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -273,6 +293,7 @@ export default function Corbeille({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/document.png"
@@ -284,6 +305,7 @@ export default function Corbeille({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -292,6 +314,7 @@ export default function Corbeille({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/pictures.png"
@@ -303,6 +326,7 @@ export default function Corbeille({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -311,6 +335,7 @@ export default function Corbeille({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/music.png"
@@ -322,6 +347,7 @@ export default function Corbeille({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -330,6 +356,7 @@ export default function Corbeille({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/movies.png"
@@ -340,18 +367,17 @@ export default function Corbeille({
               </div>
             </div>
             <div className="min-w-3/5 max-w-3/5 w-3/5 h-full">
-              <div
-                className="p-4 z-10 flex flex-wrap gap-2"
-                onFocus={() => setElement(null)}
-              >
+              <div className="p-4 z-10 flex flex-wrap gap-2">
                 {corbeilleJSON.map((corbeille: Corbeille, number) => (
                   <button
                     key={number}
-                    onFocus={() => setElement("1")}
+                    onClick={() => setElement("1")}
+                    onBlur={() => setElement(null)}
                     className="cursor-pointer hover:bg-[#4D4D4D] focus:bg-[#4D4D4D] rounded w-20 flex flex-col gap-2 text-center items-center py-1 z-20"
                   >
                     <div className="h-full">
                       <Image
+                        loading="eager"
                         width={96}
                         height={96}
                         src={corbeille.thumbnailPath}

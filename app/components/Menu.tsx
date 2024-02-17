@@ -7,6 +7,7 @@ export default function Menu() {
         <div className="glass bg-neutral-900/60 p-8 h-full">
           <div className="flex items-center rounded p-1 text-xs font-semibold gap-2 text-neutral-400 border-b-2 border-b-[#08a1f7] bg-black">
             <Image
+              loading="eager"
               width={50}
               height={50}
               src="/menu/search.png"
@@ -22,10 +23,7 @@ export default function Menu() {
           <div className="text-white p-2">
             {stackJSON.map((category, number) => (
               <>
-                <div
-                  className="flex items-center justify-between"
-                  key={number}
-                >
+                <div className="flex items-center justify-between" key={number}>
                   <h2 className="font-bold">{category.name}</h2>
                   <span className="bg-neutral-700 text-neutral-300 p-1 rounded-md text-[9px] font-bold hover:bg-neutral-600/80">
                     See more
@@ -39,6 +37,7 @@ export default function Menu() {
                     >
                       <div className="h-full">
                         <Image
+                          loading="eager"
                           width={48}
                           height={48}
                           src={technology.imagePath}
@@ -60,19 +59,21 @@ export default function Menu() {
             <div className="flex justify-between text-neutral-200 text-sm font-semibold">
               <div className="flex items-center gap-2">
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/menu/moi.jpeg"
-                  alt="close window"
+                  alt="Me"
                   className="p-0.5 w-11 rounded-full"
                 />
                 <h2>Martin Rigaux</h2>
               </div>
               <Image
+                loading="eager"
                 width={50}
                 height={50}
                 src="/menu/power.png"
-                alt="close window"
+                alt="Power"
                 className="p-3 w-12 rounded-full brightness-90"
               />
             </div>

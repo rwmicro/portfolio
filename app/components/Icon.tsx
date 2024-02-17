@@ -45,6 +45,7 @@ const Icon: React.FC<IconProps> = ({
     >
       <div className="h-full">
         <Image
+          loading="eager"
           width={48}
           height={48}
           src={image_src}

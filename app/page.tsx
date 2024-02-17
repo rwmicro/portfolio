@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useCallback, useEffect, Suspense } from "react";
-import { XYCoord, useDrop } from "react-dnd";
+import { useDrop } from "react-dnd";
 import Image from "next/image";
 import Menu from "./components/Menu";
 import CV from "./components/CV";
@@ -118,11 +118,13 @@ const Index: React.FC = () => {
         src="/background.jpg"
         alt="background_windows"
         quality={100}
+        loading="eager"
       />
       <div className="bg-black/80 h-14 w-full absolute bottom-0 flex items-center">
         <div className="flex justify-around items-center w-full h-full">
           <div className="flex gap-2 items-center">
             <Image
+              loading="eager"
               width={48}
               height={48}
               src="/menu.png"
@@ -134,6 +136,7 @@ const Index: React.FC = () => {
             <div className="h-10 w-52 bg-white/10 rounded-full hover:bg-white/15 text-neutral-500 flex items-center pl-3">
               {" "}
               <Image
+                loading="eager"
                 width={32}
                 height={32}
                 src="/hand.png"
@@ -149,6 +152,7 @@ const Index: React.FC = () => {
                 }}
               >
                 <Image
+                  loading="eager"
                   width={48}
                   height={48}
                   src="/bin.png"
@@ -165,6 +169,7 @@ const Index: React.FC = () => {
                 }}
               >
                 <Image
+                  loading="eager"
                   width={48}
                   height={48}
                   src="/adobe.png"
@@ -180,6 +185,7 @@ const Index: React.FC = () => {
                 }}
               >
                 <Image
+                  loading="eager"
                   width={48}
                   height={48}
                   src="/folder.png"
@@ -192,6 +198,7 @@ const Index: React.FC = () => {
           <div className="absolute right-5 flex gap-1 items-center h-full">
             <div>
               <Image
+                loading="eager"
                 width={20}
                 height={20}
                 src="/up.png"
@@ -201,6 +208,7 @@ const Index: React.FC = () => {
             </div>
             <div>
               <Image
+                loading="eager"
                 width={24}
                 height={24}
                 src="/wifi.png"
@@ -210,6 +218,7 @@ const Index: React.FC = () => {
             </div>
             <div>
               <Image
+                loading="eager"
                 width={24}
                 height={24}
                 src="/speakers.png"
@@ -219,6 +228,7 @@ const Index: React.FC = () => {
             </div>
             <div>
               <Image
+                loading="eager"
                 width={24}
                 height={24}
                 src="/battery.png"

@@ -31,6 +31,7 @@ export default function Projects({
     x: window.innerWidth / 2,
     y: window.innerHeight / 2,
   });
+  const [element, setElement] = useState<string | null>(null);
 
   const [, drag] = useDrag({
     item: { type: "box" },
@@ -57,6 +58,7 @@ export default function Projects({
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/explorer.png"
@@ -74,6 +76,7 @@ export default function Projects({
                 onClick={setVisible}
               >
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/minus.png"
@@ -83,6 +86,7 @@ export default function Projects({
               </div>
               <div className="w-12 hover:bg-white/10 flex justify-center">
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/square.png"
@@ -95,6 +99,7 @@ export default function Projects({
                 onClick={setDestroy}
               >
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/close.png"
@@ -108,6 +113,7 @@ export default function Projects({
             <div className="flex items-center gap-1">
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/arrow-neutral.png"
@@ -117,6 +123,7 @@ export default function Projects({
               </div>
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/arrow-neutral.png"
@@ -126,6 +133,7 @@ export default function Projects({
               </div>
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/chevron.png"
@@ -135,6 +143,7 @@ export default function Projects({
               </div>
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/arrow-white.png"
@@ -147,6 +156,7 @@ export default function Projects({
               <div className="flex items-center h-full">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/folder.png"
@@ -156,6 +166,7 @@ export default function Projects({
                 </div>
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/up.png"
@@ -169,6 +180,7 @@ export default function Projects({
               <div className="flex items-center gap-1">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -178,6 +190,7 @@ export default function Projects({
                 </div>
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/reload.png"
@@ -190,6 +203,7 @@ export default function Projects({
             <div className="flex items-center gap-1 h-full w-3/12 border-[0.2px] border-neutral-600 px-2">
               <div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/search.png"
@@ -209,6 +223,7 @@ export default function Projects({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/up.png"
@@ -217,6 +232,7 @@ export default function Projects({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/pc.png"
@@ -228,6 +244,7 @@ export default function Projects({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -236,6 +253,7 @@ export default function Projects({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/desktop.png"
@@ -247,6 +265,7 @@ export default function Projects({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -255,6 +274,7 @@ export default function Projects({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/download.png"
@@ -266,6 +286,7 @@ export default function Projects({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -274,6 +295,7 @@ export default function Projects({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/document.png"
@@ -285,6 +307,7 @@ export default function Projects({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -293,6 +316,7 @@ export default function Projects({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/pictures.png"
@@ -304,6 +328,7 @@ export default function Projects({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -312,6 +337,7 @@ export default function Projects({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/music.png"
@@ -323,6 +349,7 @@ export default function Projects({
               <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
                 <div>
                   <Image
+                    loading="eager"
                     width={50}
                     height={50}
                     src="/projects/chevron.png"
@@ -331,6 +358,7 @@ export default function Projects({
                   />
                 </div>
                 <Image
+                  loading="eager"
                   width={50}
                   height={50}
                   src="/projects/movies.png"
@@ -343,15 +371,18 @@ export default function Projects({
             <div className="min-w-3/5 max-w-3/5 w-3/5 h-full">
               <div className="p-4 z-10 flex flex-wrap gap-2">
                 {projectsJSON.map((projectJson: Project, number) => (
-                  <div
+                  <button
                     key={number}
                     onClick={() => {
                       setProject(projectJson);
+                      setElement("1");
                     }}
+                    onBlur={() => setElement(null)}
                     className="cursor-pointer hover:bg-[#4D4D4D] rounded w-20 flex flex-col gap-2 text-center items-center py-1"
                   >
                     <div className="h-full">
                       <Image
+                        loading="eager"
                         width={96}
                         height={96}
                         src={projectJson.thumbnailPath}
@@ -362,7 +393,7 @@ export default function Projects({
                     <span className="text-xs font-medium text-white">
                       {projectJson.name}
                     </span>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
@@ -371,10 +402,11 @@ export default function Projects({
                 <span className="text-xl font-bold">{project.title}</span>
                 <div className="py-3">
                   <Image
+                    loading="eager"
                     width={300}
                     height={300}
                     src={project.imagePath}
-                    alt=""
+                    alt={project.name}
                     className="object-contain"
                   />
                 </div>
@@ -414,6 +446,7 @@ export default function Projects({
           <div className="h-8 bg-[#1C1C1C] w-full flex gap-2 py-1 pl-2 items-center text-xs">
             {projectsJSON.length} element(s)
             <span>|</span>
+            {element ? element : "Aucun"} élément sélectionné
           </div>
         </div>
       </>
