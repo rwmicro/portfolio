@@ -17,7 +17,8 @@
     "react-beautiful-dnd": "^13.1.1",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@types/node": "^20",
