@@ -120,7 +120,7 @@ const Index: React.FC = () => {
         quality={100}
         loading="eager"
       />
-      <div className="bg-neutral-900/95 h-14 w-full absolute bottom-0 flex items-center">
+      <div className="bg-[#212121] h-14 w-full absolute bottom-0 flex items-center border-t border-[#3f3f3f]">
         <div className="flex justify-around items-center w-full h-full">
           <div className="flex gap-2 items-center">
             <Image
