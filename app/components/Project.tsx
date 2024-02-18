@@ -3,6 +3,8 @@ import projectsJSON from "../../public/projects/projects.json";
 import { useState } from "react";
 import Link from "next/link";
 import { useDrag } from "react-dnd";
+import PC from "./Projets/PC";
+import Favoris from "./Projets/Favoris";
 
 type Project = {
   name: string;
@@ -249,161 +251,22 @@ export default function Projects({
             </div>
           </div>
           <div className="flex w-full h-full bg-[#191919]">
-            <div className="min-w-3/12 max-w-3/12 w-3/12 h-full flex flex-col items-center py-2 border-r border-neutral-700 font-medium">
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/up.png"
-                    alt="Desktop"
-                    className="w-5 p-1 rotate-180"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/pc.png"
-                  alt="Desktop"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Ce PC</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/desktop.png"
-                  alt="Desktop"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Bureau</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/download.png"
-                  alt="Downloads"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Téléchargements</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/document.png"
-                  alt="Documents"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Documents</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/pictures.png"
-                  alt="Pictures"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Images</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/music.png"
-                  alt="up"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Musique</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/movies.png"
-                  alt="Videos"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Vidéos</span>
-              </div>
+            <div className="min-w-3/12 max-w-3/12 w-3/12 h-full flex flex-col gap-5 py-2 border-r border-neutral-700 font-medium">
+              <Favoris />
+              <PC />
             </div>
             <div className="min-w-8/12 max-w-8/12 w-8/12 h-full">
               <div className="h-8 items-center flex w-full px-2 text-xs font-medium">
                 <div className="w-8/12 pl-4">Nom</div>
-                <span className="w-3/12 border-l border-neutral-500 pl-2">Créé le</span>
-                <span className="w-2/12 border-l border-neutral-500 pl-2">Type</span>
-                <span className="w-2/12 border-l border-neutral-500 pl-2">Date</span>
+                <span className="w-3/12 border-l border-neutral-500 pl-2">
+                  Créé le
+                </span>
+                <span className="w-2/12 border-l border-neutral-500 pl-2">
+                  Type
+                </span>
+                <span className="w-2/12 border-l border-neutral-500 pl-2">
+                  Date
+                </span>
               </div>
               <div className="p-2 z-10 flex flex-col">
                 {projectsJSON.map((projectJson: Project, number) => (

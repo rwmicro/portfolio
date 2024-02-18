@@ -39,18 +39,18 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
         <div
           ref={drag}
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
-          className="absolute border border-neutral-700 w-6/12 h-4/5 text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30 "
+          className="absolute border border-neutral-700 w-6/12 h-5/6 bg-neutral-900/90 glass text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30 "
         >
-          <div className="w-full bg-neutral-900/80 glass flex justify-between pl-2 items-center">
+          <div className="w-full flex justify-between pl-2 h-12 items-center">
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image
                   loading="eager"
-                  width={96}
-                  height={96}
+                  width={50}
+                  height={50}
                   src="/adobe.png"
-                  alt="Adobe Acrobat Reader"
-                  className="p-1 w-7"
+                  alt="Adobe"
+                  className="p-1 w-8"
                 />
               </div>
               <h2 className="text-[12px] font-medium">
@@ -59,50 +59,58 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
             </div>
             <div className="flex items-center">
               <div
-                className="w-12 hover:bg-white/10 flex justify-center"
+                className="w-12 h-10 hover:bg-white/10 flex justify-center items-center"
                 onClick={setVisible}
               >
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/minus.png"
-                  alt="Minus Window"
-                  className="p-1 w-7"
-                />
-              </div>
-              <div className="w-12 hover:bg-white/10 flex justify-center">
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/square.png"
-                  alt="Maximize window"
-                  className="p-1.5 w-7"
-                />
+                <div>
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/minus.png"
+                    alt="close window"
+                    className="p-1 w-7"
+                  />
+                </div>
               </div>
               <div
-                className="w-12 hover:bg-red-600 flex justify-center"
+                className="w-12 h-10 hover:bg-white/10 flex justify-center items-center"
+              >
+                <div>
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/square.png"
+                    alt="Maximize window"
+                    className="p-1.5 w-7"
+                  />
+                </div>
+              </div>
+              <div
+                className="w-12 h-10 hover:bg-red-600 flex justify-center items-center"
                 onClick={setDestroy}
               >
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/close.png"
-                  alt="Close window"
-                  className="p-1.5 w-7 h-full"
-                />
+                <div>
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/close.png"
+                    alt="close window"
+                    className="p-1.5 w-7"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <div className="h-9 bg-neutral-900/80 glass w-full flex justify-between pr-2 items-center">
+          <div className="h-9 w-full flex justify-between pr-2 items-center">
             <div className="flex gap-1 items-center text-xs">
-              <span className="p-1 hover:bg-neutral-700/70 px-2">Fichier</span>
-              <span className="p-1 hover:bg-neutral-700/70 px-2">Edition</span>
-              <span className="p-1 hover:bg-neutral-700/70 px-2">View</span>
-              <span className="p-1 hover:bg-neutral-700/70 px-2">Fenêtres</span>
-              <span className="p-1 hover:bg-neutral-700/70 px-2">Aide</span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Fichier</span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Edition</span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">View</span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Fenêtres</span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Aide</span>
             </div>
             <div>
               <Image

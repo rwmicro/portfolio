@@ -2,6 +2,8 @@ import Image from "next/image";
 import corbeilleJSON from "../../public/corbeille/corbeille.json";
 import { useState } from "react";
 import { useDrag } from "react-dnd";
+import Favoris from "./Projets/Favoris";
+import PC from "./Projets/PC";
 
 interface CorbeilleProps {
   visibility: boolean;
@@ -52,7 +54,7 @@ export default function Corbeille({
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
           className="absolute bg-[#202020] border-neutral-700 w-8/12 h-4/5 text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30"
         >
-          <div className="w-full flex justify-between pl-2 items-center">
+          <div className="w-full flex justify-between pl-2 h-12 items-center">
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image
@@ -61,7 +63,7 @@ export default function Corbeille({
                   height={50}
                   src="/bin.png"
                   alt="Corbeille"
-                  className="p-1 w-7"
+                  className="p-1 w-8"
                 />
               </div>
               <h2 className="text-[12px] font-medium">
@@ -70,40 +72,48 @@ export default function Corbeille({
             </div>
             <div className="flex items-center">
               <div
-                className="w-12 hover:bg-white/10 flex justify-center"
+                className="w-12 h-10 hover:bg-white/10 flex justify-center items-center"
                 onClick={setVisible}
               >
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/minus.png"
-                  alt="close window"
-                  className="p-1 w-7"
-                />
-              </div>
-              <div className="w-12 hover:bg-white/10 flex justify-center">
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/square.png"
-                  alt="close window"
-                  className="p-1.5 w-7"
-                />
+                <div>
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/minus.png"
+                    alt="close window"
+                    className="p-1 w-7"
+                  />
+                </div>
               </div>
               <div
-                className="w-12 hover:bg-red-600 flex justify-center"
+                className="w-12 h-10 hover:bg-white/10 flex justify-center items-center"
+              >
+                <div>
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/square.png"
+                    alt="Maximize window"
+                    className="p-1.5 w-7"
+                  />
+                </div>
+              </div>
+              <div
+                className="w-12 h-10 hover:bg-red-600 flex justify-center items-center"
                 onClick={setDestroy}
               >
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/close.png"
-                  alt="close window"
-                  className="p-1.5 w-7 h-full"
-                />
+                <div>
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/close.png"
+                    alt="close window"
+                    className="p-1.5 w-7"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -151,7 +161,7 @@ export default function Corbeille({
               </div>
             </div>
             <div className="flex justify-between h-full items-center text-xs font-medium w-7/12 border-[0.2px] border-neutral-600 px-2 bg-transparent text-white outline-none">
-              <div className="flex items-center h-full">
+            <div className="flex items-center h-full">
                 <div>
                   <Image
                     loading="eager"
@@ -168,13 +178,13 @@ export default function Corbeille({
                     width={50}
                     height={50}
                     src="/up.png"
-                    alt="Down"
-                    className="p-1.5 w-7 rotate-90"
+                    alt=">"
+                    className="p-2.5 w-7 rotate-90"
                   />
                 </div>
-                <span>C:/portfolio/corbeille</span>
-              </div>
+                <span>Corbeille</span>
 
+              </div>
               <div className="flex items-center gap-1">
                 <div>
                   <Image
@@ -206,7 +216,7 @@ export default function Corbeille({
                   height={50}
                   src="/projects/search.png"
                   alt="Search"
-                  className="w-7 p-1"
+                  className="w-7 p-1 rotate-90"
                 />
               </div>
               <input
@@ -217,154 +227,9 @@ export default function Corbeille({
             </div>
           </div>
           <div className="flex w-full h-full bg-[#191919]">
-            <div className="min-w-1/5 max-w-1/5 w-1/5 h-full flex flex-col items-center py-2 border-r border-neutral-700 font-medium">
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/up.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5 rotate-180"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/pc.png"
-                  alt="Desktop"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Ce PC</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/desktop.png"
-                  alt="Desktop"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Bureau</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/download.png"
-                  alt="Downloads"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Téléchargements</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/document.png"
-                  alt="Documents"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Documents</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/pictures.png"
-                  alt="Pictures"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Images</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/music.png"
-                  alt="up"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Musique</span>
-              </div>
-              <div className="flex items-center align-middle w-11/12 hover:bg-neutral-800 rounded px-3">
-                <div>
-                  <Image
-                    loading="eager"
-                    width={50}
-                    height={50}
-                    src="/projects/chevron.png"
-                    alt="Desktop"
-                    className="w-5 p-0.5"
-                  />
-                </div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/projects/movies.png"
-                  alt="Videos"
-                  className="p-1 w-7 rounded"
-                />
-                <span className="text-xs">Vidéos</span>
-              </div>
+          <div className="min-w-3/12 max-w-3/12 w-3/12 h-full flex flex-col gap-5 py-2 border-r border-neutral-700 font-medium">
+              <Favoris />
+              <PC />
             </div>
             <div className="min-w-3/5 max-w-3/5 w-3/5 h-full">
               <div className="p-4 z-10 flex flex-wrap gap-2">

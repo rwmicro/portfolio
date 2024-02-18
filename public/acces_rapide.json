@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Projets",
+    "image_src": "/folder.png",
+    "link": "projets"
+  },
+  {
+    "title": "CV",
+    "image_src": "/adobe.png",
+    "link": "resume"
+  },
+  {
+    "title": "Corbeille",
+    "image_src": "/bin.png",
+    "link": "corbeille"
+  }
+]
