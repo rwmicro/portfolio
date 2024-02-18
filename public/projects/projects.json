@@ -10,7 +10,8 @@
       { "id": 2, "name": "Scolaire" }
     ],
     "imagePath": "/projects/roguelike/roguelike.jpg",
-    "thumbnailPath": "/projects/roguelike/roguelike.jpg",
+    "taille": "5 Mo",
+    "type": "Scolaire",
     "repo_link": ""
   },
   {
@@ -20,27 +21,29 @@
     "description": "Projet scolaire ayant pour but de déployer des instances Docker à partir de scripts Bash. Nous avons dû écrire un script d'installation et de configuration d'Odoo. Ainsi que des scripts de déploiement de base de données et de back-up.",
     "repo_type": "github",
     "tools": [
-      { "id": 0, "name": "Bash" },
+      { "id": 0, "name": "Bash Docker" },
       { "id": 1, "name": "Scolaire" },
       { "id": 2, "name": "2023" }
     ],
     "imagePath": "/projects/odoo/odoo.png",
-    "thumbnailPath": "/projects/odoo/odoo.png",
+    "taille": "3 Mo",
+    "type": "Scolaire",
     "repo_link": ""
   },
   {
-    "date": "04/12/2020",
+    "date": "15/11/2022",
     "title": "Déploiement d'un serveur Synapse Matrix",
     "name": "Matrix",
     "description": "Déploiement d'un serveur Synapse Matrix disponible sur un serveur et accessible via un client web. Le tout managé par un reverse proxy Nginx.",
     "repo_type": "github",
     "tools": [
-      { "id": 0, "name": "Bash" },
+      { "id": 0, "name": "Bash Docker" },
       { "id": 1, "name": "Scolaire" },
       { "id": 2, "name": "2022" }
     ],
     "imagePath": "/projects/matrix/matrix.svg",
-    "thumbnailPath": "/projects/matrix/matrix.svg",
+    "taille": "2 Mo",
+    "type": "Scolaire",
     "repo_link": ""
   },
   {
@@ -55,7 +58,24 @@
       { "id": 2, "name": "2020" }
     ],
     "imagePath": "/projects/netflix/netflix.jpg",
-    "thumbnailPath": "/projects/netflix/N.png",
+    "taille": "12 Mo",
+    "type": "Personnel",
     "repo_link": "https://www.ngc967.nebula.li"
+  },
+  {
+    "date": "01/11/2023",
+    "title": "Mise en place d'un parc informatique",
+    "name": "Parc Informatique",
+    "description": "Durant ma troisième année d'étude j'ai réalisé à l'aide de 3 autres éleves une infrastructure réseau ainsi que la mise en place d'un système NFS et LDAP. Ceci afin de simuler un réal parc informatique d'entreprise.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "NFS LDAP" },
+      { "id": 1, "name": "Scolaire" },
+      { "id": 2, "name": "2023" }
+    ],
+    "imagePath": "/projects/infra_nfs/infra.png",
+    "type": "Scolaire",
+    "taille": "4 Mo",
+    "repo_link": ""
   }
 ]

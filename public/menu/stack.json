@@ -13,6 +13,10 @@
       {
         "imagePath": "/menu/opencv.png",
         "name": "OpenCV"
+      },
+      {
+        "imagePath": "/menu/matlab.png",
+        "name": "Matlab"
       }
     ]
   },
@@ -20,7 +24,7 @@
     "name": "Front-end",
     "stack": [
       {
-        "imagePath": "/menu/nextjs.svg",
+        "imagePath": "/menu/nextjs.png",
         "name": "NextJS"
       },
       {

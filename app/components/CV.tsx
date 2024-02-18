@@ -41,7 +41,7 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
           className="absolute border border-neutral-700 w-6/12 h-4/5 text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30 "
         >
-          <div className="h-10 w-full bg-neutral-900/80 glass flex justify-between pl-2 items-center">
+          <div className="w-full bg-neutral-900/80 glass flex justify-between pl-2 items-center">
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image
@@ -96,13 +96,13 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
               </div>
             </div>
           </div>
-          <div className="h-8 bg-neutral-900/80 glass w-full flex justify-between px-2 items-center">
+          <div className="h-9 bg-neutral-900/80 glass w-full flex justify-between pr-2 items-center">
             <div className="flex gap-1 items-center text-xs">
-              <span className="p-1">File</span>
-              <span className="p-1">Edit</span>
-              <span className="p-1">View</span>
-              <span className="p-1">Windows</span>
-              <span className="p-1">Help</span>
+              <span className="p-1 hover:bg-neutral-700/70 px-2">Fichier</span>
+              <span className="p-1 hover:bg-neutral-700/70 px-2">Edition</span>
+              <span className="p-1 hover:bg-neutral-700/70 px-2">View</span>
+              <span className="p-1 hover:bg-neutral-700/70 px-2">Fenêtres</span>
+              <span className="p-1 hover:bg-neutral-700/70 px-2">Aide</span>
             </div>
             <div>
               <Image

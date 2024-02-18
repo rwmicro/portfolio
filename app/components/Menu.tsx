@@ -16,7 +16,7 @@ export default function Menu() {
             />
             <input
               type="text"
-              placeholder="Type here your seach..."
+              placeholder="Tapez votre recherche ici..."
               className="bg-transparent w-full h-full outline-none"
             />
           </div>
@@ -26,14 +26,14 @@ export default function Menu() {
                 <div className="flex items-center justify-between" key={number}>
                   <h2 className="font-bold">{category.name}</h2>
                   <span className="bg-neutral-700 text-neutral-300 p-1 rounded-md text-[9px] font-bold hover:bg-neutral-600/80">
-                    See more
+                    Voir plus
                   </span>
                 </div>
                 <div className="flex flex-wrap items-center pb-3">
                   {category.stack.map((technology, number) => (
                     <div
                       key={number}
-                      className="hover:bg-blue-900 rounded w-20 flex flex-col gap-1 text-center items-center py-1"
+                      className="hover:bg-blue-950 rounded w-20 flex flex-col gap-1 text-center items-center py-1"
                     >
                       <div className="h-full">
                         <Image

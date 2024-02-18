@@ -52,7 +52,7 @@ export default function Corbeille({
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
           className="absolute bg-[#202020] border-neutral-700 w-8/12 h-4/5 text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30"
         >
-          <div className="h-10 w-full flex justify-between pl-2 items-center">
+          <div className="w-full flex justify-between pl-2 items-center">
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image

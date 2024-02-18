@@ -120,7 +120,7 @@ const Index: React.FC = () => {
         quality={100}
         loading="eager"
       />
-      <div className="bg-black/80 h-14 w-full absolute bottom-0 flex items-center">
+      <div className="bg-neutral-900/95 h-14 w-full absolute bottom-0 flex items-center">
         <div className="flex justify-around items-center w-full h-full">
           <div className="flex gap-2 items-center">
             <Image
@@ -133,7 +133,10 @@ const Index: React.FC = () => {
               quality={100}
               onClick={() => setMenuVisible(!menuVisible)}
             />
-            <div className="h-10 w-52 bg-white/10 rounded-full hover:bg-white/15 text-neutral-500 flex items-center pl-3">
+            <div
+              className="h-10 w-52 bg-white/10 rounded-full hover:bg-white/15 text-neutral-500 flex items-center pl-3"
+              onClick={() => setMenuVisible(!menuVisible)}
+            >
               {" "}
               <Image
                 loading="eager"
@@ -143,7 +146,7 @@ const Index: React.FC = () => {
                 alt="logo"
                 className="p-0.5 mr-1 rounded "
               />
-              My portfolio!
+              Mon portfolio!
             </div>
             {corbeilleVisible !== null && (
               <div
