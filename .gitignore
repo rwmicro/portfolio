@@ -1,3 +1,6 @@
+## Ignore mon CV
+public/resume.pdf
+
 # Logs
 logs
 *.log

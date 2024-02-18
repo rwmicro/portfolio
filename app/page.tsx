@@ -128,8 +128,8 @@ const Index: React.FC = () => {
               width={48}
               height={48}
               src="/menu.png"
-              alt="logo"
-              className="p-0.5 rounded hover:bg-white/10 z-50"
+              alt="Menu Windows"
+              className="p-0.5 rounded hover:bg-neutral-800/80 z-50"
               quality={100}
               onClick={() => setMenuVisible(!menuVisible)}
             />
