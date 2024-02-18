@@ -38,6 +38,8 @@ Make sure you have the following installed on your machine before getting starte
 
 ## Usage
 
+Add your personnal resume in the public folder as a name `resume.pdf`.
+
 To launch the application in development mode, use the following command:
 ```bash
 npm run dev
