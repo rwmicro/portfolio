@@ -160,7 +160,7 @@ const Index: React.FC = () => {
                   height={48}
                   src="/bin.png"
                   alt="logo"
-                  className="p-1 rounded bg-white/10"
+                  className="p-2 rounded bg-neutral-800"
                 />
               </div>
             )}
@@ -177,7 +177,7 @@ const Index: React.FC = () => {
                   height={48}
                   src="/adobe.png"
                   alt="logo"
-                  className="p-1 rounded bg-white/10"
+                  className="p-2 rounded bg-neutral-800"
                 />
               </div>
             )}
@@ -191,9 +191,9 @@ const Index: React.FC = () => {
                   loading="eager"
                   width={48}
                   height={48}
-                  src="/folder.png"
-                  alt="logo"
-                  className="p-1 rounded bg-white/10"
+                  src="/explorer.png"
+                  alt="Windows Explorer"
+                  className="p-2 rounded bg-neutral-800"
                 />
               </div>
             )}
