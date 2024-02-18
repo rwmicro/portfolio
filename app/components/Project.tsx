@@ -87,14 +87,14 @@ export default function Projects({
                 onClick={setVisible}
               >
                 <div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/minus.png"
-                  alt="close window"
-                  className="p-1 w-7"
-                />
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/minus.png"
+                    alt="close window"
+                    className="p-1 w-7"
+                  />
                 </div>
               </div>
               <div
@@ -102,14 +102,14 @@ export default function Projects({
                 onClick={maximizeWindow}
               >
                 <div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/square.png"
-                  alt="Maximize window"
-                  className="p-1.5 w-7"
-                />
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/square.png"
+                    alt="Maximize window"
+                    className="p-1.5 w-7"
+                  />
                 </div>
               </div>
               <div
@@ -117,14 +117,14 @@ export default function Projects({
                 onClick={setDestroy}
               >
                 <div>
-                <Image
-                  loading="eager"
-                  width={50}
-                  height={50}
-                  src="/close.png"
-                  alt="close window"
-                  className="p-1.5 w-7"
-                />
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/close.png"
+                    alt="close window"
+                    className="p-1.5 w-7"
+                  />
                 </div>
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function Projects({
                     loading="eager"
                     width={50}
                     height={50}
-                    src="/folder.png"
+                    src="/projects/document.png"
                     alt="close window"
                     className="p-1 w-7"
                   />
@@ -190,13 +190,23 @@ export default function Projects({
                     width={50}
                     height={50}
                     src="/up.png"
-                    alt="close window"
-                    className="p-1.5 w-7 rotate-90"
+                    alt=">"
+                    className="p-2.5 w-7 rotate-90"
                   />
                 </div>
-                <span>C:/portfolio/projets</span>
+                <span>Documents</span>
+                <div>
+                  <Image
+                    loading="eager"
+                    width={50}
+                    height={50}
+                    src="/up.png"
+                    alt=">_2"
+                    className="p-2.5 w-7 rotate-90"
+                  />
+                </div>
+                <span>Projets</span>
               </div>
-
               <div className="flex items-center gap-1">
                 <div>
                   <Image
@@ -220,7 +230,7 @@ export default function Projects({
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-1 h-full w-3/12 border-[0.2px] border-neutral-600 px-2">
+            <div className="flex items-center gap-1 h-full w-3/12 border border-neutral-600 px-2">
               <div>
                 <Image
                   loading="eager"
@@ -228,13 +238,13 @@ export default function Projects({
                   height={50}
                   src="/projects/search.png"
                   alt="Search"
-                  className="w-7 p-1"
+                  className="w-7 p-1 rotate-90"
                 />
               </div>
               <input
-                placeholder="Rechercher"
+                placeholder="Rechercher dans : Projets"
                 type="text"
-                className="text-sm w-full h-full bg-transparent text-white outline-none"
+                className="text-xs w-full h-full bg-transparent text-neutral-400 outline-none"
               />
             </div>
           </div>
@@ -248,7 +258,7 @@ export default function Projects({
                     height={50}
                     src="/up.png"
                     alt="Desktop"
-                    className="w-5 p-0.5 rotate-180"
+                    className="w-5 p-1 rotate-180"
                   />
                 </div>
                 <Image
@@ -391,9 +401,9 @@ export default function Projects({
             <div className="min-w-8/12 max-w-8/12 w-8/12 h-full">
               <div className="h-8 items-center flex w-full px-2 text-xs font-medium">
                 <div className="w-8/12 pl-4">Nom</div>
-                <span className="w-3/12 border-l pl-2">Créé le</span>
-                <span className="w-2/12 border-l pl-2">Type</span>
-                <span className="w-2/12 border-l pl-2">Date</span>
+                <span className="w-3/12 border-l border-neutral-500 pl-2">Créé le</span>
+                <span className="w-2/12 border-l border-neutral-500 pl-2">Type</span>
+                <span className="w-2/12 border-l border-neutral-500 pl-2">Date</span>
               </div>
               <div className="p-2 z-10 flex flex-col">
                 {projectsJSON.map((projectJson: Project, number) => (
