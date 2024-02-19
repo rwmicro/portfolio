@@ -24,13 +24,6 @@ interface ProjectsProps {
   setDestroy: () => void;
 }
 
-function maximizeWindow() {
-  const window = document.querySelector(".window");
-  if (window) {
-    window.classList.add("maximized");
-  }
-}
-
 export default function Projects({
   visibility,
   setVisible,
@@ -101,7 +94,6 @@ export default function Projects({
               </div>
               <div
                 className="w-12 h-10 hover:bg-white/10 flex justify-center items-center"
-                onClick={maximizeWindow}
               >
                 <div>
                   <Image
