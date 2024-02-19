@@ -86,9 +86,7 @@ export default function Corbeille({
                   />
                 </div>
               </div>
-              <div
-                className="w-12 h-10 hover:bg-white/10 flex justify-center items-center"
-              >
+              <div className="w-12 h-10 hover:bg-white/10 flex justify-center items-center">
                 <div>
                   <Image
                     loading="eager"
@@ -161,7 +159,7 @@ export default function Corbeille({
               </div>
             </div>
             <div className="flex justify-between h-full items-center text-xs font-medium w-7/12 border-[0.2px] border-neutral-600 px-2 bg-transparent text-white outline-none">
-            <div className="flex items-center h-full">
+              <div className="flex items-center h-full">
                 <div>
                   <Image
                     loading="eager"
@@ -183,7 +181,6 @@ export default function Corbeille({
                   />
                 </div>
                 <span>Corbeille</span>
-
               </div>
               <div className="flex items-center gap-1">
                 <div>
@@ -227,7 +224,7 @@ export default function Corbeille({
             </div>
           </div>
           <div className="flex w-full h-full bg-[#191919]">
-          <div className="min-w-3/12 max-w-3/12 w-3/12 h-full flex flex-col gap-5 py-2 border-r border-neutral-700 font-medium">
+            <div className="min-w-3/12 max-w-3/12 w-3/12 h-full flex flex-col gap-5 py-2 border-r border-neutral-700 font-medium">
               <Favoris />
               <PC />
             </div>

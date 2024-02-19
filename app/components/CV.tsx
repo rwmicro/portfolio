@@ -39,9 +39,9 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
         <div
           ref={drag}
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
-          className="absolute border border-neutral-700 w-6/12 h-5/6 bg-neutral-900/90 glass text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30 "
+          className="absolute w-6/12 h-5/6 bg-neutral-900/90 glass text-white rounded-xl overflow-hidden -translate-x-1/2 -translate-y-1/2 flex flex-col z-30 "
         >
-          <div className="w-full flex justify-between pl-2 h-12 items-center">
+          <div className="w-full flex justify-between pl-2 items-center">
             <div className="flex gap-1 items-center h-full">
               <div>
                 <Image
@@ -73,9 +73,7 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
                   />
                 </div>
               </div>
-              <div
-                className="w-12 h-10 hover:bg-white/10 flex justify-center items-center"
-              >
+              <div className="w-12 h-10 hover:bg-white/10 flex justify-center items-center">
                 <div>
                   <Image
                     loading="eager"
@@ -106,11 +104,21 @@ export default function CV({ visibility, setVisible, setDestroy }: CVProps) {
           </div>
           <div className="h-9 w-full flex justify-between pr-2 items-center">
             <div className="flex gap-1 items-center text-xs">
-              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Fichier</span>
-              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Edition</span>
-              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">View</span>
-              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Fenêtres</span>
-              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">Aide</span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">
+                Fichier
+              </span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">
+                Edition
+              </span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">
+                View
+              </span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">
+                Fenêtres
+              </span>
+              <span className="flex items-center hover:bg-neutral-700/70 px-2 h-9">
+                Aide
+              </span>
             </div>
             <div>
               <Image

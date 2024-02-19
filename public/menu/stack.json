@@ -76,6 +76,10 @@
       {
         "imagePath": "/menu/ansible.png",
         "name": "Ansible"
+      },
+      {
+        "imagePath": "/menu/ci-cd.png",
+        "name": "CI-CD"
       }
     ]
   }
