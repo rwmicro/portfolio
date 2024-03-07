@@ -4,7 +4,7 @@ This project is a personal portfolio designed and developed using Next.js, featu
 
 ## Overview
 
-![Portfolio screenshot](public/portoflio.png)
+![Portfolio screenshot](public/portfolio.png)
 
 ## Features
 

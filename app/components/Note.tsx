@@ -7,7 +7,7 @@ interface Position {
 }
 
 export default function Note() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const [position, setPosition] = useState<Position>({
     x: 0,
@@ -16,12 +16,15 @@ export default function Note() {
   
   // Revoir cette partie
   useEffect(() => {
+
     if (typeof window !== "undefined") {
       setPosition((prevPosition) => ({
         x: window.innerWidth - 298,
         y: prevPosition.y,
       }));
     }
+    setVisible(true);
+
   }, []);
 
   const [, drag] = useDrag({
