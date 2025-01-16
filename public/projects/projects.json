@@ -1,8 +1,8 @@
 [
   {
-    "date": "03/09/2022",
+    "date": "09/2022",
     "name": "Rogue Like",
-    "title": "Création d'un jeu type Rogue Like en équipe",
+    "title": "Jeu type Rogue Like en équipe",
     "description": "Projet de début d'année en groupe écrit en semaine. Le but était de créer un jeu type Rogue Like en Java. Le jeu est jouable en ligne. Le code source est disponible sur le dépôt Git de l'école.",
     "tools": [
       { "id": 0, "name": "Java" },
@@ -15,8 +15,8 @@
     "repo_link": ""
   },
   {
-    "date": "15/01/2023",
-    "title": "Déploiement d'instances docker en fonction ",
+    "date": "01/2023",
+    "title": "Déploiement d'instances Docker",
     "name": "Odoo",
     "description": "Projet scolaire ayant pour but de déployer des instances Docker à partir de scripts Bash. Nous avons dû écrire un script d'installation et de configuration d'Odoo. Ainsi que des scripts de déploiement de base de données et de back-up.",
     "repo_type": "github",
@@ -31,8 +31,8 @@
     "repo_link": ""
   },
   {
-    "date": "15/11/2022",
-    "title": "Déploiement d'un serveur Synapse Matrix",
+    "date": "11/2022",
+    "title": "Serveur Synapse Matrix",
     "name": "Matrix",
     "description": "Déploiement d'un serveur Synapse Matrix disponible sur un serveur et accessible via un client web. Le tout managé par un reverse proxy Nginx.",
     "repo_type": "github",
@@ -47,8 +47,8 @@
     "repo_link": ""
   },
   {
-    "date": "04/12/2020",
-    "title": "Recontruction du site Netflix en NextJS",
+    "date": "12/2020",
+    "title": "Clone du site Netflix",
     "name": "Clone Netflix",
     "description": "Ce projet avait pour but de refaire le site Netflix afin de m'entrainer de manière plus ludique que de suivre un cours en ligne.",
     "repo_type": "github",
@@ -63,7 +63,7 @@
     "repo_link": "https://www.ngc967.nebula.li"
   },
   {
-    "date": "01/11/2023",
+    "date": "11/2023",
     "title": "Mise en place d'un parc informatique",
     "name": "Parc Informatique",
     "description": "Durant ma troisième année d'étude j'ai réalisé à l'aide de 3 autres éleves une infrastructure réseau ainsi que la mise en place d'un système NFS et LDAP. Ceci afin de simuler un réal parc informatique d'entreprise.",
@@ -76,6 +76,102 @@
     "imagePath": "/projects/infra_nfs/infra.png",
     "type": "Scolaire",
     "taille": "4 Mo",
+    "repo_link": ""
+  },
+  {
+    "date":"06/2024",
+    "title": "Site de suppresion de l'arrière plan d'une image",
+    "name": "RemoveBG",
+    "description": "Site web permettant de supprimer l'arrière plan d'une image. Le site est réalisé en NextJS.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "NextJS" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2024" }
+    ],
+    "imagePath": "/projects/removebg/removebg.jpg",
+    "type": "Personnel",
+    "taille": "5 Mo",
+    "repo_link": ""
+  },
+  {
+    "date": "09/2024",
+    "title": "Site de partage de connaissance",
+    "name": "Pensine",
+    "description": "Endroit ou je partage l'essemble des sujets que je maîtrise ou que je suis en train d'apprendre",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "NextJS" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2024" }
+    ],
+    "imagePath": "/projects/pensine/pensine.jpg",
+    "type": "Personnel",
+    "taille": "5 Mo",
+    "repo_link": ""
+  },
+  {
+    "date": "03/2024",
+    "title": "Reconnaissance de texte sur une image",
+    "name": "MNIST",
+    "description": "Projet ayant pour but de reconnaître des chiffres sur une image. Le modèle est entraîné en Python sur le dataset MNIST.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "PyTorch" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2024" }
+    ],
+    "imagePath": "/projects/mnist/mnist.jpg",
+    "type": "Personnel",
+    "taille": "5 Mo",
+    "repo_link": ""
+  },
+  {
+    "date": "10/2024",
+    "title": "Détection de cancer du sein sur des images",
+    "name": "Cancer",
+    "description": "Projet ayant pour but de détecter des cancers du sein sur des images. Le modèle est entraîné en Python sur le dataset de Kaggle.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "PyTorch" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2024" }
+    ],
+    "imagePath": "/projects/cancer/cancer.jpg",
+    "type": "Personnel",
+    "taille": "5 Mo",
+    "repo_link": ""
+  },
+  {
+    "date": "01/2024",
+    "title": "Clone du site Discord",
+    "name": "Clone Discord",
+    "description": "Projet ayant pour but de refaire le site Discord en NextJS.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "NextJS" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2024" }
+    ],
+    "imagePath": "/projects/discord/discord.jpg",
+    "type": "Personnel",
+    "taille": "5 Mo",
+    "repo_link": ""
+  },
+  {
+    "date": "09/2024",
+    "title": "Scanner de ports",
+    "name": "Scanner",
+    "description": "Projet ayant pour but de scanner des ports sur une machine. Le scanner est écrit en Rust.",
+    "repo_type": "github",
+    "tools": [
+      { "id": 0, "name": "Rust" },
+      { "id": 1, "name": "Personnel" },
+      { "id": 2, "name": "2024" }
+    ],
+    "imagePath": "/projects/scanner/scanner.jpg",
+    "type": "Personnel",
+    "taille": "2 Mo",
     "repo_link": ""
   }
 ]

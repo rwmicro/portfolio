@@ -9,7 +9,7 @@
 
 body {
   overflow: hidden;
-  cursor: url("../public/cursor.png") default;
+  cursor: url("/public/cursor.png") default;
 }
 
 .maximized {

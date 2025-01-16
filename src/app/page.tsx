@@ -2,16 +2,16 @@
 import React, { useState, useCallback, useEffect, Suspense } from "react";
 import { useDrop } from "react-dnd";
 import Image from "next/image";
-import Menu from "./components/Menu";
-import CV from "./components/CV";
-import Projects from "./components/Project";
-import Corbeille from "./components/Corbeille";
-import Loading from "./components/loading";
+import Menu from "../components/Menu";
+import CV from "../components/CV";
+import Projects from "../components/Project";
+import Corbeille from "../components/Corbeille";
+import Loading from "../components/loading";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import Icon from "./components/Icon";
-import iconsJSON from "../public/icons.json";
-import Note from "./components/Note";
+import Icon from "../components/Icon";
+import iconsJSON from "../../public/icons.json";
+import Note from "../components/Note";
 
 const Index: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false);
