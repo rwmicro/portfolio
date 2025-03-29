@@ -17,6 +17,10 @@
       {
         "imagePath": "/menu/matlab.png",
         "name": "Matlab"
+      },
+      {
+        "imagePath": "/menu/hugging-face.png",
+        "name": "Transformers.js"
       }
     ]
   },
@@ -49,8 +53,16 @@
     "name": "Back-end",
     "stack": [
       {
-        "imagePath": "/menu/prisma.png",
-        "name": "Prisma"
+        "imagePath": "/menu/medusajs.jpeg",
+        "name": "Medusa.js"
+      },
+      {
+        "imagePath": "/menu/nodejs.png",
+        "name": "Node.js"
+      },
+      {
+        "imagePath": "/menu/typescript.png",
+        "name": "Typescript"
       }
     ]
   },

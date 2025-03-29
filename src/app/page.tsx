@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useEffect, Suspense } from "react";
 import { useDrop } from "react-dnd";
 import Image from "next/image";
-import Menu from "../components/Menu";
+import Menu from "../components/menu";
 import CV from "../components/CV";
 import Projects from "../components/Project";
 import Corbeille from "../components/Corbeille";

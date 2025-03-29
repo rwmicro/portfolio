@@ -50,7 +50,7 @@
     "date": "12/2020",
     "title": "Clone du site Netflix",
     "name": "Clone Netflix",
-    "description": "Ce projet avait pour but de refaire le site Netflix afin de m'entrainer de manière plus ludique que de suivre un cours en ligne.",
+    "description": "Ce projet avait pour but de refaire le site Netflix afin de m'entrainer au développement web de manière plus ludique que de suivre un cours en ligne.",
     "repo_type": "github",
     "tools": [
       { "id": 0, "name": "NextJS" },
@@ -60,7 +60,7 @@
     "imagePath": "/projects/netflix/netflix.jpg",
     "taille": "12 Mo",
     "type": "Personnel",
-    "repo_link": "https://www.ngc967.nebula.li"
+    "repo_link": "https://github.com/rwmicro/netflix-clone"
   },
   {
     "date": "11/2023",
@@ -80,19 +80,19 @@
   },
   {
     "date":"06/2024",
-    "title": "Site de suppresion de l'arrière plan d'une image",
+    "title": "Suppression de l'arrière plan d'une image",
     "name": "RemoveBG",
-    "description": "Site web permettant de supprimer l'arrière plan d'une image. Le site est réalisé en NextJS.",
+    "description": "Site web permettant de supprimer l'arrière plan d'une image.",
     "repo_type": "github",
     "tools": [
-      { "id": 0, "name": "NextJS" },
+      { "id": 0, "name": "Next.js Transformers.js" },
       { "id": 1, "name": "Personnel" },
       { "id": 2, "name": "2024" }
     ],
     "imagePath": "/projects/removebg/removebg.jpg",
     "type": "Personnel",
     "taille": "5 Mo",
-    "repo_link": ""
+    "repo_link": "https://removebg.nebula.li"
   },
   {
     "date": "09/2024",
@@ -101,7 +101,7 @@
     "description": "Endroit ou je partage l'essemble des sujets que je maîtrise ou que je suis en train d'apprendre",
     "repo_type": "github",
     "tools": [
-      { "id": 0, "name": "NextJS" },
+      { "id": 0, "name": "Next.js" },
       { "id": 1, "name": "Personnel" },
       { "id": 2, "name": "2024" }
     ],
@@ -121,23 +121,23 @@
       { "id": 1, "name": "Personnel" },
       { "id": 2, "name": "2024" }
     ],
-    "imagePath": "/projects/mnist/mnist.jpg",
+    "imagePath": "/projects/mnist/mnist.png",
     "type": "Personnel",
     "taille": "5 Mo",
-    "repo_link": ""
+    "repo_link": "https://github.com/rwmicro/mnist-ai"
   },
   {
     "date": "10/2024",
     "title": "Détection de cancer du sein sur des images",
     "name": "Cancer",
-    "description": "Projet ayant pour but de détecter des cancers du sein sur des images. Le modèle est entraîné en Python sur le dataset de Kaggle.",
+    "description": "Projet ayant pour but de détecter des cancers du sein sur des images de mamographies.",
     "repo_type": "github",
     "tools": [
       { "id": 0, "name": "PyTorch" },
       { "id": 1, "name": "Personnel" },
       { "id": 2, "name": "2024" }
     ],
-    "imagePath": "/projects/cancer/cancer.jpg",
+    "imagePath": "/projects/breast-cancer/breast-cancer.png",
     "type": "Personnel",
     "taille": "5 Mo",
     "repo_link": ""
@@ -146,10 +146,10 @@
     "date": "01/2024",
     "title": "Clone du site Discord",
     "name": "Clone Discord",
-    "description": "Projet ayant pour but de refaire le site Discord en NextJS.",
+    "description": "Projet ayant pour but de refaire le site Discord en Next.js.",
     "repo_type": "github",
     "tools": [
-      { "id": 0, "name": "NextJS" },
+      { "id": 0, "name": "Next.js" },
       { "id": 1, "name": "Personnel" },
       { "id": 2, "name": "2024" }
     ],
@@ -162,7 +162,7 @@
     "date": "09/2024",
     "title": "Scanner de ports",
     "name": "Scanner",
-    "description": "Projet ayant pour but de scanner des ports sur une machine. Le scanner est écrit en Rust.",
+    "description": "Création d'un scanner de ports.",
     "repo_type": "github",
     "tools": [
       { "id": 0, "name": "Rust" },
@@ -172,6 +172,6 @@
     "imagePath": "/projects/scanner/scanner.jpg",
     "type": "Personnel",
     "taille": "2 Mo",
-    "repo_link": ""
+    "repo_link": "https://github.com/rwmicro/port-scanner-r"
   }
 ]
